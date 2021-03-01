@@ -1,0 +1,40 @@
+.blink {
+  animation: blink infinite;
+  animation-duration: 3s;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+.blink_reverse {
+  animation: blink infinite reverse;
+  animation-duration: 3s;
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+}
+
+@keyframes blink {
+  0% {
+    fill: green;
+    transform: rotate(0deg);
+  }
+  30% {
+    fill: green;
+    transform: rotate(0deg);
+  }
+  100% {
+    fill: darkblue;
+    transform: rotate(360deg);
+  }
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
